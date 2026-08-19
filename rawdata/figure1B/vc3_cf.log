@@ -1,0 +1,242 @@
+/tmp/slurmd/job2028230/slurm_script: line 11: activate: No such file or directory
+[INFO] 2026-03-24 10:28:00 
+===========================This is vConTACT3 3.0.0b74===========================
+
+[INFO] 2026-03-24 10:28:00 Identifying TTY
+[INFO] 2026-03-24 10:28:00 Non-interactive mode detected, progress DISABLED
+[INFO] 2026-03-24 10:28:00 Identifying tool locations...
+[INFO] 2026-03-24 10:28:00 Identified the following locations for tools. If one is not found, it may not impact the analysis, unless said tool is required for the analysis (i.e. not finding MCL but needing it to cluster proteins)
+
+mmseqs             /gpfs/ts0/home/lb808/anaconda3/envs/vcontact3/bin/mmseqs
+[INFO] 2026-03-24 10:28:00 Identified 16 CPUs
+[INFO] 2026-03-24 10:28:00 Sourcing databases...
+[INFO] 2026-03-24 10:28:00 Found 1 databases in /lustre/home/lb808/db. Since no version was specified, will use latest version.
+[INFO] 2026-03-24 10:28:00 Using latest version: 220
+[INFO] 2026-03-24 10:28:00 Identifying and validating inputs...
+[WARNING] 2026-03-24 10:28:00 Unable to identify protein sequence file.
+[WARNING] 2026-03-24 10:28:00 Unable to identify gene-to-genome file.
+[WARNING] 2026-03-24 10:28:00 Unable to identify nucleotide length file.
+[INFO] 2026-03-24 10:28:00 Identified the following input files. If you provided a file path and it is not found (i.e. "None") then check for any warning messages and correct.
+
+Nucleotides                                           cat_all_genomes.fasta
+Proteins                                                               None
+Gene-to-genome                                                         None
+[INFO] 2026-03-24 10:28:00 
+-----------------Pre-flight checks complete! Beginning analysis-----------------
+
+[INFO] 2026-03-24 10:28:00 Directory vc3_fullprokdb_cf created.
+[INFO] 2026-03-24 10:28:00 Predicting genes and generating gene-to-genome mapping file.
+[INFO] 2026-03-24 10:28:01 Identifying ORFs for cat_all_genomes
+[INFO] 2026-03-24 10:28:03 Unique genes identified in user data:	3291
+[INFO] 2026-03-24 10:28:03 Unique genomes identified in user data:	37
+[INFO] 2026-03-24 10:28:03 After merging user + reference data:
+	545663 unique genes	5341 unique genomes
+[INFO] 2026-03-24 10:28:03 Processing identity: 0.3
+[INFO] 2026-03-24 10:28:03 Merging and updating PCs associated with this identity
+[INFO] 2026-03-24 10:28:18 Rectifying new cluster IDs during merger of reference database and user sequences
+[INFO] 2026-03-24 10:28:38 There were 8 clusters added, 268 clusters extended from merge
+[INFO] 2026-03-24 10:28:48 Building profiles for 0.3...
+[INFO] 2026-03-24 10:28:48 Building matrix of genome(s) X PC/HMMs
+[INFO] 2026-03-24 10:28:49 Cleaning up temporary MMSeqs2 files for 0.3...
+[INFO] 2026-03-24 10:28:49 Processing identity: 0.4
+[INFO] 2026-03-24 10:28:50 Merging and updating PCs associated with this identity
+[INFO] 2026-03-24 10:29:03 Rectifying new cluster IDs during merger of reference database and user sequences
+[INFO] 2026-03-24 10:29:26 There were 8 clusters added, 268 clusters extended from merge
+[INFO] 2026-03-24 10:29:37 Building profiles for 0.4...
+[INFO] 2026-03-24 10:29:37 Building matrix of genome(s) X PC/HMMs
+[INFO] 2026-03-24 10:29:38 Cleaning up temporary MMSeqs2 files for 0.4...
+[INFO] 2026-03-24 10:29:38 Processing identity: 0.5
+[INFO] 2026-03-24 10:29:39 Merging and updating PCs associated with this identity
+[INFO] 2026-03-24 10:29:52 Rectifying new cluster IDs during merger of reference database and user sequences
+[INFO] 2026-03-24 10:30:18 There were 10 clusters added, 275 clusters extended from merge
+[INFO] 2026-03-24 10:30:32 Building profiles for 0.5...
+[INFO] 2026-03-24 10:30:32 Building matrix of genome(s) X PC/HMMs
+[INFO] 2026-03-24 10:30:33 Cleaning up temporary MMSeqs2 files for 0.5...
+[INFO] 2026-03-24 10:30:33 Processing identity: 0.6
+[INFO] 2026-03-24 10:30:33 Merging and updating PCs associated with this identity
+[INFO] 2026-03-24 10:30:45 Rectifying new cluster IDs during merger of reference database and user sequences
+[INFO] 2026-03-24 10:31:14 There were 11 clusters added, 287 clusters extended from merge
+[INFO] 2026-03-24 10:31:29 Building profiles for 0.6...
+[INFO] 2026-03-24 10:31:29 Building matrix of genome(s) X PC/HMMs
+[INFO] 2026-03-24 10:31:30 Cleaning up temporary MMSeqs2 files for 0.6...
+[INFO] 2026-03-24 10:31:30 Processing identity: 0.7
+[INFO] 2026-03-24 10:31:31 Merging and updating PCs associated with this identity
+[INFO] 2026-03-24 10:31:43 Rectifying new cluster IDs during merger of reference database and user sequences
+[INFO] 2026-03-24 10:32:14 There were 13 clusters added, 295 clusters extended from merge
+[INFO] 2026-03-24 10:32:30 Building profiles for 0.7...
+[INFO] 2026-03-24 10:32:30 Building matrix of genome(s) X PC/HMMs
+[INFO] 2026-03-24 10:32:31 Cleaning up temporary MMSeqs2 files for 0.7...
+[INFO] 2026-03-24 10:32:32 Saving profiles to vc3_fullprokdb_cf/cat_all_genomes.prokaryotes.profile.pkl.gz. If there is a problem during downstream processing, vConTACT3 will resume from AT LEAST this point. Enable --force-overwrite if you wish to start from scratch.
+[INFO] 2026-03-24 10:33:24 Identifying 0.3...
+[INFO] 2026-03-24 10:33:26 Building distance matrix from PC profile
+[INFO] 2026-03-24 10:33:31 Finished matrix preparation, converting to distances
+[INFO] 2026-03-24 10:33:31 Building genome network with 5341 contigs and 119086 HMMs
+[INFO] 2026-03-24 10:33:31 Calculating distances using SqRoot
+[INFO] 2026-03-24 10:33:31 Genome-similarity/distance network : 5341 genomes, 2917015 edges
+[INFO] 2026-03-24 10:33:31 Genome network building time: 0.202s
+[INFO] 2026-03-24 10:33:31 Not exporting genome network...
+[INFO] 2026-03-24 10:33:31 Writing shared HMMs and distance matrix to vc3_fullprokdb_cf/HMMprofile.0.3_SqRoot_dist_and_shared_genes.h5
+[INFO] 2026-03-24 10:33:35 Filtering edges at 3 to reduce cross-realm connections
+[INFO] 2026-03-24 10:33:36 Removed 963882 edges. There are now 491959 edges
+[INFO] 2026-03-24 10:33:36 Separating multiple-realm component 11 between Adnaviria, Varidnaviria
+[INFO] 2026-03-24 10:33:36 Removed 49 cross-realm edges
+[INFO] 2026-03-24 10:33:36 Writing NetworKit distance graph to vc3_fullprokdb_cf/HMMprofile.0.3_SqRoot_dist.nkbg
+[INFO] 2026-03-24 10:33:37 wrote graph NetworKit.Graph(n=5341, m=491956) to file vc3_fullprokdb_cf/HMMprofile.0.3_SqRoot_dist.nkbg
+[INFO] 2026-03-24 10:33:37 Writing NetworKit shared genes graph to vc3_fullprokdb_cf/HMMprofile.0.3_SqRoot_shared.nkbg
+[INFO] 2026-03-24 10:33:37 wrote graph NetworKit.Graph(n=5341, m=491959) to file vc3_fullprokdb_cf/HMMprofile.0.3_SqRoot_shared.nkbg
+[INFO] 2026-03-24 10:33:37 Preparing for identification of genes shared between references and user sequences
+[INFO] 2026-03-24 10:33:37 Identifying genes shared within references of realm: Adnaviria
+[INFO] 2026-03-24 10:33:37 Identifying genes shared within references of realm: Duplodnaviria
+[INFO] 2026-03-24 10:33:38 Identifying genes shared within references of realm: Monodnaviria
+[INFO] 2026-03-24 10:33:38 Identifying genes shared within references of realm: Riboviria
+[INFO] 2026-03-24 10:33:38 Identifying genes shared within references of realm: Varidnaviria
+[INFO] 2026-03-24 10:33:38 Ensuring no PCs (in reference genomes) are shared between realms...
+[INFO] 2026-03-24 10:33:38 Enforcing minimum PC count (3) for each unique gene in each realm...
+[INFO] 2026-03-24 10:33:38 Identifying genes shared within user sequences (references still included)...
+[INFO] 2026-03-24 10:33:39 Identifying shared PCs between user and references
+[INFO] 2026-03-24 10:33:39 Iterating through network components and identifying realms for identity: 0.3
+[INFO] 2026-03-24 10:33:39 Parallel processing of network components enabled...
+[INFO] 2026-03-24 10:33:40 Completed identity 0.3
+[INFO] 2026-03-24 10:33:40 Identifying 0.4...
+[INFO] 2026-03-24 10:33:41 Building distance matrix from PC profile
+[INFO] 2026-03-24 10:33:50 Finished matrix preparation, converting to distances
+[INFO] 2026-03-24 10:33:50 Building genome network with 5341 contigs and 133854 HMMs
+[INFO] 2026-03-24 10:33:50 Calculating distances using SqRoot
+[INFO] 2026-03-24 10:33:50 Genome-similarity/distance network : 5341 genomes, 1600594 edges
+[INFO] 2026-03-24 10:33:50 Genome network building time: 0.120s
+[INFO] 2026-03-24 10:33:50 Not exporting genome network...
+[INFO] 2026-03-24 10:33:50 Writing shared HMMs and distance matrix to vc3_fullprokdb_cf/HMMprofile.0.4_SqRoot_dist_and_shared_genes.h5
+[INFO] 2026-03-24 10:33:53 Filtering edges at 3 to reduce cross-realm connections
+[INFO] 2026-03-24 10:33:54 Removed 505874 edges. There are now 291757 edges
+[INFO] 2026-03-24 10:33:54 Separating multiple-realm component 12 between Adnaviria, Varidnaviria
+[INFO] 2026-03-24 10:33:54 Removed 49 cross-realm edges
+[INFO] 2026-03-24 10:33:54 Writing NetworKit distance graph to vc3_fullprokdb_cf/HMMprofile.0.4_SqRoot_dist.nkbg
+[INFO] 2026-03-24 10:33:54 wrote graph NetworKit.Graph(n=5341, m=291754) to file vc3_fullprokdb_cf/HMMprofile.0.4_SqRoot_dist.nkbg
+[INFO] 2026-03-24 10:33:54 Writing NetworKit shared genes graph to vc3_fullprokdb_cf/HMMprofile.0.4_SqRoot_shared.nkbg
+[INFO] 2026-03-24 10:33:54 wrote graph NetworKit.Graph(n=5341, m=291757) to file vc3_fullprokdb_cf/HMMprofile.0.4_SqRoot_shared.nkbg
+[INFO] 2026-03-24 10:33:54 Preparing for identification of genes shared between references and user sequences
+[INFO] 2026-03-24 10:33:54 Identifying genes shared within references of realm: Adnaviria
+[INFO] 2026-03-24 10:33:54 Identifying genes shared within references of realm: Duplodnaviria
+[INFO] 2026-03-24 10:33:55 Identifying genes shared within references of realm: Monodnaviria
+[INFO] 2026-03-24 10:33:55 Identifying genes shared within references of realm: Riboviria
+[INFO] 2026-03-24 10:33:55 Identifying genes shared within references of realm: Varidnaviria
+[INFO] 2026-03-24 10:33:55 Ensuring no PCs (in reference genomes) are shared between realms...
+[INFO] 2026-03-24 10:33:55 Enforcing minimum PC count (3) for each unique gene in each realm...
+[INFO] 2026-03-24 10:33:55 Identifying genes shared within user sequences (references still included)...
+[INFO] 2026-03-24 10:33:56 Identifying shared PCs between user and references
+[INFO] 2026-03-24 10:33:56 Iterating through network components and identifying realms for identity: 0.4
+[INFO] 2026-03-24 10:33:56 Parallel processing of network components enabled...
+[INFO] 2026-03-24 10:33:57 Completed identity 0.4
+[INFO] 2026-03-24 10:33:57 Identifying 0.5...
+[INFO] 2026-03-24 10:34:00 Building distance matrix from PC profile
+[INFO] 2026-03-24 10:34:08 Finished matrix preparation, converting to distances
+[INFO] 2026-03-24 10:34:08 Building genome network with 5341 contigs and 150827 HMMs
+[INFO] 2026-03-24 10:34:08 Calculating distances using SqRoot
+[INFO] 2026-03-24 10:34:08 Genome-similarity/distance network : 5341 genomes, 877245 edges
+[INFO] 2026-03-24 10:34:08 Genome network building time: 0.065s
+[INFO] 2026-03-24 10:34:08 Not exporting genome network...
+[INFO] 2026-03-24 10:34:08 Writing shared HMMs and distance matrix to vc3_fullprokdb_cf/HMMprofile.0.5_SqRoot_dist_and_shared_genes.h5
+[INFO] 2026-03-24 10:34:11 Filtering edges at 3 to reduce cross-realm connections
+[INFO] 2026-03-24 10:34:11 Removed 241075 edges. There are now 194880 edges
+[INFO] 2026-03-24 10:34:11 Separating multiple-realm component 25 between Adnaviria, Varidnaviria
+[INFO] 2026-03-24 10:34:11 Removed 47 cross-realm edges
+[INFO] 2026-03-24 10:34:11 Writing NetworKit distance graph to vc3_fullprokdb_cf/HMMprofile.0.5_SqRoot_dist.nkbg
+[INFO] 2026-03-24 10:34:11 wrote graph NetworKit.Graph(n=5341, m=194877) to file vc3_fullprokdb_cf/HMMprofile.0.5_SqRoot_dist.nkbg
+[INFO] 2026-03-24 10:34:11 Writing NetworKit shared genes graph to vc3_fullprokdb_cf/HMMprofile.0.5_SqRoot_shared.nkbg
+[INFO] 2026-03-24 10:34:11 wrote graph NetworKit.Graph(n=5341, m=194880) to file vc3_fullprokdb_cf/HMMprofile.0.5_SqRoot_shared.nkbg
+[INFO] 2026-03-24 10:34:11 Preparing for identification of genes shared between references and user sequences
+[INFO] 2026-03-24 10:34:11 Identifying genes shared within references of realm: Adnaviria
+[INFO] 2026-03-24 10:34:11 Identifying genes shared within references of realm: Duplodnaviria
+[INFO] 2026-03-24 10:34:12 Identifying genes shared within references of realm: Monodnaviria
+[INFO] 2026-03-24 10:34:12 Identifying genes shared within references of realm: Riboviria
+[INFO] 2026-03-24 10:34:12 Identifying genes shared within references of realm: Varidnaviria
+[INFO] 2026-03-24 10:34:12 Ensuring no PCs (in reference genomes) are shared between realms...
+[INFO] 2026-03-24 10:34:12 Enforcing minimum PC count (3) for each unique gene in each realm...
+[INFO] 2026-03-24 10:34:12 Identifying genes shared within user sequences (references still included)...
+[INFO] 2026-03-24 10:34:13 Identifying shared PCs between user and references
+[INFO] 2026-03-24 10:34:13 Iterating through network components and identifying realms for identity: 0.5
+[INFO] 2026-03-24 10:34:13 Parallel processing of network components enabled...
+[INFO] 2026-03-24 10:34:14 Completed identity 0.5
+[INFO] 2026-03-24 10:34:14 Identifying 0.6...
+[INFO] 2026-03-24 10:34:18 Building distance matrix from PC profile
+[INFO] 2026-03-24 10:34:28 Finished matrix preparation, converting to distances
+[INFO] 2026-03-24 10:34:28 Building genome network with 5341 contigs and 169089 HMMs
+[INFO] 2026-03-24 10:34:28 Calculating distances using SqRoot
+[INFO] 2026-03-24 10:34:28 Genome-similarity/distance network : 5341 genomes, 512623 edges
+[INFO] 2026-03-24 10:34:28 Genome network building time: 0.034s
+[INFO] 2026-03-24 10:34:28 Not exporting genome network...
+[INFO] 2026-03-24 10:34:28 Writing shared HMMs and distance matrix to vc3_fullprokdb_cf/HMMprofile.0.6_SqRoot_dist_and_shared_genes.h5
+[INFO] 2026-03-24 10:34:31 Filtering edges at 3 to reduce cross-realm connections
+[INFO] 2026-03-24 10:34:31 Removed 95599 edges. There are now 158045 edges
+[INFO] 2026-03-24 10:34:31 Writing NetworKit distance graph to vc3_fullprokdb_cf/HMMprofile.0.6_SqRoot_dist.nkbg
+[INFO] 2026-03-24 10:34:31 wrote graph NetworKit.Graph(n=5341, m=158045) to file vc3_fullprokdb_cf/HMMprofile.0.6_SqRoot_dist.nkbg
+[INFO] 2026-03-24 10:34:31 Writing NetworKit shared genes graph to vc3_fullprokdb_cf/HMMprofile.0.6_SqRoot_shared.nkbg
+[INFO] 2026-03-24 10:34:31 wrote graph NetworKit.Graph(n=5341, m=158045) to file vc3_fullprokdb_cf/HMMprofile.0.6_SqRoot_shared.nkbg
+[INFO] 2026-03-24 10:34:31 Preparing for identification of genes shared between references and user sequences
+[INFO] 2026-03-24 10:34:31 Identifying genes shared within references of realm: Adnaviria
+[INFO] 2026-03-24 10:34:31 Identifying genes shared within references of realm: Duplodnaviria
+[INFO] 2026-03-24 10:34:32 Identifying genes shared within references of realm: Monodnaviria
+[INFO] 2026-03-24 10:34:32 Identifying genes shared within references of realm: Riboviria
+[INFO] 2026-03-24 10:34:32 Identifying genes shared within references of realm: Varidnaviria
+[INFO] 2026-03-24 10:34:32 Ensuring no PCs (in reference genomes) are shared between realms...
+[INFO] 2026-03-24 10:34:32 Enforcing minimum PC count (3) for each unique gene in each realm...
+[INFO] 2026-03-24 10:34:32 Identifying genes shared within user sequences (references still included)...
+[INFO] 2026-03-24 10:34:34 Identifying shared PCs between user and references
+[INFO] 2026-03-24 10:34:34 Iterating through network components and identifying realms for identity: 0.6
+[INFO] 2026-03-24 10:34:34 Parallel processing of network components enabled...
+[INFO] 2026-03-24 10:34:35 Completed identity 0.6
+[INFO] 2026-03-24 10:34:35 Identifying 0.7...
+[INFO] 2026-03-24 10:34:38 Building distance matrix from PC profile
+[INFO] 2026-03-24 10:34:49 Finished matrix preparation, converting to distances
+[INFO] 2026-03-24 10:34:49 Building genome network with 5341 contigs and 187835 HMMs
+[INFO] 2026-03-24 10:34:49 Calculating distances using SqRoot
+[INFO] 2026-03-24 10:34:49 Genome-similarity/distance network : 5341 genomes, 365949 edges
+[INFO] 2026-03-24 10:34:49 Genome network building time: 0.021s
+[INFO] 2026-03-24 10:34:49 Not exporting genome network...
+[INFO] 2026-03-24 10:34:49 Writing shared HMMs and distance matrix to vc3_fullprokdb_cf/HMMprofile.0.7_SqRoot_dist_and_shared_genes.h5
+[INFO] 2026-03-24 10:34:52 Filtering edges at 3 to reduce cross-realm connections
+[INFO] 2026-03-24 10:34:52 Removed 65942 edges. There are now 114365 edges
+[INFO] 2026-03-24 10:34:52 Writing NetworKit distance graph to vc3_fullprokdb_cf/HMMprofile.0.7_SqRoot_dist.nkbg
+[INFO] 2026-03-24 10:34:52 wrote graph NetworKit.Graph(n=5341, m=114365) to file vc3_fullprokdb_cf/HMMprofile.0.7_SqRoot_dist.nkbg
+[INFO] 2026-03-24 10:34:52 Writing NetworKit shared genes graph to vc3_fullprokdb_cf/HMMprofile.0.7_SqRoot_shared.nkbg
+[INFO] 2026-03-24 10:34:52 wrote graph NetworKit.Graph(n=5341, m=114365) to file vc3_fullprokdb_cf/HMMprofile.0.7_SqRoot_shared.nkbg
+[INFO] 2026-03-24 10:34:52 Preparing for identification of genes shared between references and user sequences
+[INFO] 2026-03-24 10:34:52 Identifying genes shared within references of realm: Adnaviria
+[INFO] 2026-03-24 10:34:52 Identifying genes shared within references of realm: Duplodnaviria
+[INFO] 2026-03-24 10:34:53 Identifying genes shared within references of realm: Monodnaviria
+[INFO] 2026-03-24 10:34:53 Identifying genes shared within references of realm: Riboviria
+[INFO] 2026-03-24 10:34:53 Identifying genes shared within references of realm: Varidnaviria
+[INFO] 2026-03-24 10:34:53 Ensuring no PCs (in reference genomes) are shared between realms...
+[INFO] 2026-03-24 10:34:53 Enforcing minimum PC count (3) for each unique gene in each realm...
+[INFO] 2026-03-24 10:34:53 Identifying genes shared within user sequences (references still included)...
+[INFO] 2026-03-24 10:34:55 Identifying shared PCs between user and references
+[INFO] 2026-03-24 10:34:55 Iterating through network components and identifying realms for identity: 0.7
+[INFO] 2026-03-24 10:34:55 Parallel processing of network components enabled...
+[INFO] 2026-03-24 10:34:56 Completed identity 0.7
+[INFO] 2026-03-24 10:34:57 Saving resolvers to vc3_fullprokdb_cf/cat_all_genomes.prokaryotes.resolver.pkl.gz. If there is a problem during downstream processing, vConTACT3 will resume from AT LEAST this point. Enable --force-overwrite if you wish to start from scratch.
+[INFO] 2026-03-24 10:35:02 Aggregating realm predictions and support from each of the identities for each genome...
+[INFO] 2026-03-24 10:35:07 Assigning predictions under each of the identities (if applicable) for each genome...
+[INFO] 2026-03-24 10:35:29 Saving GBGA information to vc3_fullprokdb_cf/cat_all_genomes.prokaryotes.gbga.pkl.gz. If there is a problem during downstream processing, vConTACT3 will resume from AT LEAST this point. Enable --force-overwrite if you wish to start from scratch.
+[INFO] 2026-03-24 10:35:32 Saving performance to vc3_fullprokdb_cf/cat_all_genomes.prokaryotes.performance.pkl.gz. If there is a problem during downstream processing, vConTACT3 will resume from AT LEAST this point. Enable --force-overwrite if you wish to start from scratch.
+[INFO] 2026-03-24 10:35:32 Creating exports directory: vc3_fullprokdb_cf/exports
+[INFO] 2026-03-24 10:35:32 Exporting the following types: cytoscape, profiles, completeness
+[INFO] 2026-03-24 10:35:32 Exporting the final assignments table
+[INFO] 2026-03-24 10:35:35 Exporting performance metrics
+[INFO] 2026-03-24 10:35:35 Writing cytoscape data to vc3_fullprokdb_cf/exports/cytoscape/graph.cyjs
+[INFO] 2026-03-24 10:35:35 Building cytoscape network from NetworKit
+Traceback (most recent call last):
+  File "/gpfs/ts0/home/lb808/anaconda3/envs/vcontact3/bin/vcontact3", line 226, in <module>
+    arguments.func(**args_dict)
+  File "/gpfs/ts0/home/lb808/anaconda3/envs/vcontact3/lib/python3.10/site-packages/vcontact3/vcontact3.py", line 318, in run_vcontact3
+    export = exporter.Export(gbga,
+  File "/gpfs/ts0/home/lb808/anaconda3/envs/vcontact3/lib/python3.10/site-packages/vcontact3/exports.py", line 195, in __init__
+    profile_df = pickle.load(profile_fh)
+  File "/gpfs/ts0/home/lb808/anaconda3/envs/vcontact3/lib/python3.10/gzip.py", line 321, in peek
+    return self._buffer.peek(n)
+  File "/gpfs/ts0/home/lb808/anaconda3/envs/vcontact3/lib/python3.10/_compression.py", line 68, in readinto
+    data = self.read(len(byte_view))
+  File "/gpfs/ts0/home/lb808/anaconda3/envs/vcontact3/lib/python3.10/gzip.py", line 488, in read
+    if not self._read_gzip_header():
+  File "/gpfs/ts0/home/lb808/anaconda3/envs/vcontact3/lib/python3.10/gzip.py", line 436, in _read_gzip_header
+    raise BadGzipFile('Not a gzipped file (%r)' % magic)
+gzip.BadGzipFile: Not a gzipped file (b'\x89H')
