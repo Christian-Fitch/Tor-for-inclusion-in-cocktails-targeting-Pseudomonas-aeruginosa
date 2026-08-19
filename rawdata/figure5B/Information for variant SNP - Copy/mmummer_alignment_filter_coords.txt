@@ -1,0 +1,5 @@
+/mnt/773be256-7089-43eb-a736-be2e5373be02/CPL/christian/Project_11566/X0058/11_fastp_trimmed/272_CPLreordered-pharokka/272_CPL_genome_terminase_reoriented.fasta /mnt/773be256-7089-43eb-a736-be2e5373be02/CPL/christian/Project_11566/X0058/11_fastp_trimmed/272_var-reordered-pharokka/272_var_genome_terminase_reoriented.fasta
+NUCMER
+
+[S1]	[E1]	[S2]	[E2]	[LEN 1]	[LEN 2]	[% IDY]	[LEN R]	[LEN Q]	[COV R]	[COV Q]	[TAGS]
+1	65815	1	65814	65815	65814	99.93	65815	65814	100.00	100.00	contig00001	contig00001

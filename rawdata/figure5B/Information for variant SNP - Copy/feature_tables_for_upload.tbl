@@ -1,0 +1,826 @@
+>Feature Pseudomonas_phage_CPL00272
+1	1383	CDS
+			locus_tag	272_CPL_CDS_0001
+			function	head and packaging
+			product	terminase large subunit
+1803	1420	CDS
+			locus_tag	272_CPL_CDS_0002
+			function	unknown function
+			product	hypothetical protein
+2018	1800	CDS
+			locus_tag	272_CPL_CDS_0003
+			function	unknown function
+			product	hypothetical protein
+2368	2018	CDS
+			locus_tag	272_CPL_CDS_0004
+			function	unknown function
+			product	hypothetical protein
+2810	2412	CDS
+			locus_tag	272_CPL_CDS_0005
+			function	unknown function
+			product	hypothetical protein
+3592	2813	CDS
+			locus_tag	272_CPL_CDS_0006
+			function	unknown function
+			product	unknown function
+4116	3679	CDS
+			locus_tag	272_CPL_CDS_0007
+			function	unknown function
+			product	hypothetical protein
+4025	4726	CDS
+			locus_tag	272_CPL_CDS_0008
+			function	unknown function
+			product	hypothetical protein
+4825	4730	CDS
+			locus_tag	272_CPL_CDS_0009
+			function	unknown function
+			product	hypothetical protein
+5754	4822	CDS
+			locus_tag	272_CPL_CDS_0010
+			function	unknown function
+			product	hypothetical protein
+5861	5751	CDS
+			locus_tag	272_CPL_CDS_0011
+			function	unknown function
+			product	hypothetical protein
+6205	5858	CDS
+			locus_tag	272_CPL_CDS_0012
+			function	unknown function
+			product	hypothetical protein
+6470	6213	CDS
+			locus_tag	272_CPL_CDS_0013
+			function	unknown function
+			product	hypothetical protein
+6855	6454	CDS
+			locus_tag	272_CPL_CDS_0014
+			function	unknown function
+			product	hypothetical protein
+7294	6971	CDS
+			locus_tag	272_CPL_CDS_0015
+			function	unknown function
+			product	hypothetical protein
+7727	7326	CDS
+			locus_tag	272_CPL_CDS_0016
+			function	unknown function
+			product	hypothetical protein
+7939	7805	CDS
+			locus_tag	272_CPL_CDS_0017
+			function	unknown function
+			product	hypothetical protein
+7908	10205	CDS
+			locus_tag	272_CPL_CDS_0018
+			function	head and packaging
+			product	minor head protein
+10205	11041	CDS
+			locus_tag	272_CPL_CDS_0019
+			function	head and packaging
+			product	head morphogenesis
+11060	11266	CDS
+			locus_tag	272_CPL_CDS_0020
+			function	unknown function
+			product	hypothetical protein
+11263	11403	CDS
+			locus_tag	272_CPL_CDS_0021
+			function	unknown function
+			product	hypothetical protein
+11403	11528	CDS
+			locus_tag	272_CPL_CDS_0022
+			function	unknown function
+			product	hypothetical protein
+11828	11688	CDS
+			locus_tag	272_CPL_CDS_0023
+			function	unknown function
+			product	hypothetical protein
+11917	13350	CDS
+			locus_tag	272_CPL_CDS_0024
+			function	head and packaging
+			product	head maturation protease
+13354	13989	CDS
+			locus_tag	272_CPL_CDS_0025
+			function	head and packaging
+			product	virion structural protein
+13999	15147	CDS
+			locus_tag	272_CPL_CDS_0026
+			function	head and packaging
+			product	major head protein
+15249	15686	CDS
+			locus_tag	272_CPL_CDS_0027
+			function	unknown function
+			product	hypothetical protein
+15701	16168	CDS
+			locus_tag	272_CPL_CDS_0028
+			function	head and packaging
+			product	virion structural protein
+16192	16563	CDS
+			locus_tag	272_CPL_CDS_0029
+			function	head and packaging
+			product	head protein
+16571	17122	CDS
+			locus_tag	272_CPL_CDS_0030
+			function	unknown function
+			product	hypothetical protein
+17119	17700	CDS
+			locus_tag	272_CPL_CDS_0031
+			function	connector
+			product	tail completion or Neck1 protein
+17803	19230	CDS
+			locus_tag	272_CPL_CDS_0032
+			function	tail
+			product	tail sheath
+19289	19741	CDS
+			locus_tag	272_CPL_CDS_0033
+			function	tail
+			product	tail fiber protein
+19741	20064	CDS
+			locus_tag	272_CPL_CDS_0034
+			function	head and packaging
+			product	virion structural protein
+20061	20411	CDS
+			locus_tag	272_CPL_CDS_0035
+			function	tail
+			product	baseplate wedge subunit
+20413	20844	CDS
+			locus_tag	272_CPL_CDS_0036
+			function	unknown function
+			product	hypothetical protein
+20854	21357	CDS
+			locus_tag	272_CPL_CDS_0037
+			function	tail
+			product	tail fiber protein
+21357	21896	CDS
+			locus_tag	272_CPL_CDS_0038
+			function	tail
+			product	tail fiber protein
+21905	22498	CDS
+			locus_tag	272_CPL_CDS_0039
+			function	tail
+			product	tail fiber protein
+22508	22936	CDS
+			locus_tag	272_CPL_CDS_0040
+			function	unknown function
+			product	hypothetical protein
+22940	25516	CDS
+			locus_tag	272_CPL_CDS_0041
+			function	tail
+			product	lytic tail protein
+25516	26379	CDS
+			locus_tag	272_CPL_CDS_0042
+			function	tail
+			product	baseplate hub
+26379	26912	CDS
+			locus_tag	272_CPL_CDS_0043
+			function	unknown function
+			product	hypothetical protein
+26968	27633	CDS
+			locus_tag	272_CPL_CDS_0044
+			function	tail
+			product	baseplate spike
+27690	27782	CDS
+			locus_tag	272_CPL_CDS_0045
+			function	unknown function
+			product	hypothetical protein
+27775	29028	CDS
+			locus_tag	272_CPL_CDS_0046
+			function	tail
+			product	baseplate wedge subunit
+29025	30539	CDS
+			locus_tag	272_CPL_CDS_0047
+			function	unknown function
+			product	hypothetical protein
+30475	33438	CDS
+			locus_tag	272_CPL_CDS_0048
+			function	tail
+			product	tail protein
+33440	33868	CDS
+			locus_tag	272_CPL_CDS_0049
+			function	tail
+			product	tail fiber protein
+33868	34530	CDS
+			locus_tag	272_CPL_CDS_0050
+			function	lysis
+			product	endolysin
+34806	34555	CDS
+			locus_tag	272_CPL_CDS_0051
+			function	unknown function
+			product	hypothetical protein
+35048	34890	CDS
+			locus_tag	272_CPL_CDS_0052
+			function	unknown function
+			product	hypothetical protein
+35997	35086	CDS
+			locus_tag	272_CPL_CDS_0053
+			function	DNA
+			function	 RNA and nucleotide metabolism
+			product	ATP-dependent DNA ligase
+36606	36052	CDS
+			locus_tag	272_CPL_CDS_0054
+			function	other
+			product	MazG-like pyrophosphatase
+37208	36603	CDS
+			locus_tag	272_CPL_CDS_0055
+			function	unknown function
+			product	hypothetical protein
+38161	37262	CDS
+			locus_tag	272_CPL_CDS_0056
+			function	unknown function
+			product	hypothetical protein
+38870	38250	CDS
+			locus_tag	272_CPL_CDS_0057
+			function	unknown function
+			product	hypothetical protein
+40524	38965	CDS
+			locus_tag	272_CPL_CDS_0058
+			function	DNA
+			function	 RNA and nucleotide metabolism
+			product	DNA helicase
+40931	40521	CDS
+			locus_tag	272_CPL_CDS_0059
+			function	DNA
+			function	 RNA and nucleotide metabolism
+			product	DNA helicase
+44031	40924	CDS
+			locus_tag	272_CPL_CDS_0060
+			function	DNA
+			function	 RNA and nucleotide metabolism
+			product	DNA polymerase
+44585	44031	CDS
+			locus_tag	272_CPL_CDS_0061
+			function	DNA
+			function	 RNA and nucleotide metabolism
+			product	DNA polymerase exonuclease subunit
+45677	44661	CDS
+			locus_tag	272_CPL_CDS_0062
+			function	other
+			product	polynucleotide kinase/phosphorylase
+45793	45680	CDS
+			locus_tag	272_CPL_CDS_0063
+			function	unknown function
+			product	hypothetical protein
+45798	47264	CDS
+			locus_tag	272_CPL_CDS_0064
+			function	unknown function
+			product	hypothetical protein
+47479	47261	CDS
+			locus_tag	272_CPL_CDS_0065
+			function	tail
+			product	tail assembly chaperone
+47681	47463	CDS
+			locus_tag	272_CPL_CDS_0066
+			function	unknown function
+			product	hypothetical protein
+47911	47681	CDS
+			locus_tag	272_CPL_CDS_0067
+			function	unknown function
+			product	hypothetical protein
+49000	47999	CDS
+			locus_tag	272_CPL_CDS_0068
+			function	unknown function
+			product	hypothetical protein
+49998	49105	CDS
+			locus_tag	272_CPL_CDS_0069
+			function	unknown function
+			product	hypothetical protein
+51344	50157	CDS
+			locus_tag	272_CPL_CDS_0070
+			function	DNA
+			function	 RNA and nucleotide metabolism
+			product	Dda-like helicase
+51753	51331	CDS
+			locus_tag	272_CPL_CDS_0071
+			function	unknown function
+			product	hypothetical protein
+51730	51819	CDS
+			locus_tag	272_CPL_CDS_0072
+			function	unknown function
+			product	hypothetical protein
+51922	52707	CDS
+			locus_tag	272_CPL_CDS_0073
+			function	unknown function
+			product	hypothetical protein
+52717	54135	CDS
+			locus_tag	272_CPL_CDS_0074
+			function	unknown function
+			product	hypothetical protein
+54159	54608	CDS
+			locus_tag	272_CPL_CDS_0075
+			function	unknown function
+			product	hypothetical protein
+54500	55681	CDS
+			locus_tag	272_CPL_CDS_0076
+			function	DNA
+			function	 RNA and nucleotide metabolism
+			product	DNA primase
+55687	55872	CDS
+			locus_tag	272_CPL_CDS_0077
+			function	unknown function
+			product	hypothetical protein
+56020	57759	CDS
+			locus_tag	272_CPL_CDS_0078
+			function	DNA
+			function	 RNA and nucleotide metabolism
+			product	DNA primase
+57764	57895	CDS
+			locus_tag	272_CPL_CDS_0079
+			function	unknown function
+			product	hypothetical protein
+57957	58073	CDS
+			locus_tag	272_CPL_CDS_0080
+			function	unknown function
+			product	hypothetical protein
+58258	58115	CDS
+			locus_tag	272_CPL_CDS_0081
+			function	unknown function
+			product	hypothetical protein
+58438	58265	CDS
+			locus_tag	272_CPL_CDS_0082
+			function	unknown function
+			product	hypothetical protein
+58551	58444	CDS
+			locus_tag	272_CPL_CDS_0083
+			function	unknown function
+			product	hypothetical protein
+58736	58578	CDS
+			locus_tag	272_CPL_CDS_0084
+			function	unknown function
+			product	hypothetical protein
+58729	59298	CDS
+			locus_tag	272_CPL_CDS_0085
+			function	unknown function
+			product	hypothetical protein
+59420	59295	CDS
+			locus_tag	272_CPL_CDS_0086
+			function	unknown function
+			product	hypothetical protein
+60085	59468	CDS
+			locus_tag	272_CPL_CDS_0087
+			function	unknown function
+			product	hypothetical protein
+60234	60082	CDS
+			locus_tag	272_CPL_CDS_0088
+			function	unknown function
+			product	hypothetical protein
+60970	60275	CDS
+			locus_tag	272_CPL_CDS_0089
+			function	unknown function
+			product	hypothetical protein
+61292	60981	CDS
+			locus_tag	272_CPL_CDS_0090
+			function	unknown function
+			product	hypothetical protein
+61570	61346	CDS
+			locus_tag	272_CPL_CDS_0091
+			function	unknown function
+			product	hypothetical protein
+61845	61621	CDS
+			locus_tag	272_CPL_CDS_0092
+			function	unknown function
+			product	hypothetical protein
+62236	61907	CDS
+			locus_tag	272_CPL_CDS_0093
+			function	unknown function
+			product	hypothetical protein
+63079	62237	CDS
+			locus_tag	272_CPL_CDS_0094
+			function	unknown function
+			product	hypothetical protein
+63334	63119	CDS
+			locus_tag	272_CPL_CDS_0095
+			function	unknown function
+			product	hypothetical protein
+63538	63338	CDS
+			locus_tag	272_CPL_CDS_0096
+			function	unknown function
+			product	hypothetical protein
+63965	63528	CDS
+			locus_tag	272_CPL_CDS_0097
+			function	unknown function
+			product	hypothetical protein
+64841	64056	CDS
+			locus_tag	272_CPL_CDS_0098
+			function	tail
+			product	tail length tape measure protein
+65160	64858	CDS
+			locus_tag	272_CPL_CDS_0099
+			function	unknown function
+			product	hypothetical protein
+65467	65213	CDS
+			locus_tag	272_CPL_CDS_0100
+			function	unknown function
+			product	hypothetical protein
+65645	65487	CDS
+			locus_tag	272_CPL_CDS_0101
+			function	unknown function
+			product	hypothetical protein
+>Feature Pseudomonas_phage_CPL00272_var
+1	1383	CDS
+			locus_tag	272_var_CDS_0001
+			function	head and packaging
+			product	terminase large subunit
+1803	1420	CDS
+			locus_tag	272_var_CDS_0002
+			function	unknown function
+			product	hypothetical protein
+2018	1800	CDS
+			locus_tag	272_var_CDS_0003
+			function	unknown function
+			product	hypothetical protein
+2368	2018	CDS
+			locus_tag	272_var_CDS_0004
+			function	unknown function
+			product	hypothetical protein
+2810	2412	CDS
+			locus_tag	272_var_CDS_0005
+			function	unknown function
+			product	hypothetical protein
+3592	2813	CDS
+			locus_tag	272_var_CDS_0006
+			function	unknown function
+			product	unknown function
+4116	3679	CDS
+			locus_tag	272_var_CDS_0007
+			function	unknown function
+			product	hypothetical protein
+4025	4726	CDS
+			locus_tag	272_var_CDS_0008
+			function	unknown function
+			product	hypothetical protein
+4825	4730	CDS
+			locus_tag	272_var_CDS_0009
+			function	unknown function
+			product	hypothetical protein
+5754	4822	CDS
+			locus_tag	272_var_CDS_0010
+			function	unknown function
+			product	hypothetical protein
+5861	5751	CDS
+			locus_tag	272_var_CDS_0011
+			function	unknown function
+			product	hypothetical protein
+6205	5858	CDS
+			locus_tag	272_var_CDS_0012
+			function	unknown function
+			product	hypothetical protein
+6470	6213	CDS
+			locus_tag	272_var_CDS_0013
+			function	unknown function
+			product	hypothetical protein
+6855	6454	CDS
+			locus_tag	272_var_CDS_0014
+			function	unknown function
+			product	hypothetical protein
+7294	6971	CDS
+			locus_tag	272_var_CDS_0015
+			function	unknown function
+			product	hypothetical protein
+7727	7326	CDS
+			locus_tag	272_var_CDS_0016
+			function	unknown function
+			product	hypothetical protein
+7939	7805	CDS
+			locus_tag	272_var_CDS_0017
+			function	unknown function
+			product	hypothetical protein
+7908	10205	CDS
+			locus_tag	272_var_CDS_0018
+			function	head and packaging
+			product	minor head protein
+10205	11041	CDS
+			locus_tag	272_var_CDS_0019
+			function	head and packaging
+			product	head morphogenesis
+11060	11266	CDS
+			locus_tag	272_var_CDS_0020
+			function	unknown function
+			product	hypothetical protein
+11263	11403	CDS
+			locus_tag	272_var_CDS_0021
+			function	unknown function
+			product	hypothetical protein
+11403	11528	CDS
+			locus_tag	272_var_CDS_0022
+			function	unknown function
+			product	hypothetical protein
+11828	11688	CDS
+			locus_tag	272_var_CDS_0023
+			function	unknown function
+			product	hypothetical protein
+11917	13350	CDS
+			locus_tag	272_var_CDS_0024
+			function	head and packaging
+			product	head maturation protease
+13354	13989	CDS
+			locus_tag	272_var_CDS_0025
+			function	head and packaging
+			product	virion structural protein
+13999	15147	CDS
+			locus_tag	272_var_CDS_0026
+			function	head and packaging
+			product	major head protein
+15249	15686	CDS
+			locus_tag	272_var_CDS_0027
+			function	unknown function
+			product	hypothetical protein
+15701	16168	CDS
+			locus_tag	272_var_CDS_0028
+			function	head and packaging
+			product	virion structural protein
+16192	16563	CDS
+			locus_tag	272_var_CDS_0029
+			function	head and packaging
+			product	head protein
+16571	17122	CDS
+			locus_tag	272_var_CDS_0030
+			function	unknown function
+			product	hypothetical protein
+17119	17700	CDS
+			locus_tag	272_var_CDS_0031
+			function	connector
+			product	tail completion or Neck1 protein
+17803	19230	CDS
+			locus_tag	272_var_CDS_0032
+			function	tail
+			product	tail sheath
+19289	19741	CDS
+			locus_tag	272_var_CDS_0033
+			function	tail
+			product	tail fiber protein
+19741	20064	CDS
+			locus_tag	272_var_CDS_0034
+			function	head and packaging
+			product	virion structural protein
+20061	20411	CDS
+			locus_tag	272_var_CDS_0035
+			function	tail
+			product	baseplate wedge subunit
+20413	20844	CDS
+			locus_tag	272_var_CDS_0036
+			function	unknown function
+			product	hypothetical protein
+20854	21357	CDS
+			locus_tag	272_var_CDS_0037
+			function	tail
+			product	tail fiber protein
+21357	21896	CDS
+			locus_tag	272_var_CDS_0038
+			function	tail
+			product	tail fiber protein
+21905	22498	CDS
+			locus_tag	272_var_CDS_0039
+			function	tail
+			product	tail fiber protein
+22508	22936	CDS
+			locus_tag	272_var_CDS_0040
+			function	unknown function
+			product	hypothetical protein
+22940	25516	CDS
+			locus_tag	272_var_CDS_0041
+			function	tail
+			product	lytic tail protein
+25516	26379	CDS
+			locus_tag	272_var_CDS_0042
+			function	tail
+			product	baseplate hub
+26379	26912	CDS
+			locus_tag	272_var_CDS_0043
+			function	unknown function
+			product	hypothetical protein
+26968	27633	CDS
+			locus_tag	272_var_CDS_0044
+			function	tail
+			product	baseplate spike
+27626	27718	CDS
+			locus_tag	272_var_CDS_0045
+			function	unknown function
+			product	hypothetical protein
+27729	29027	CDS
+			locus_tag	272_var_CDS_0046
+			function	tail
+			product	baseplate wedge subunit
+29024	30538	CDS
+			locus_tag	272_var_CDS_0047
+			function	unknown function
+			product	hypothetical protein
+30474	33437	CDS
+			locus_tag	272_var_CDS_0048
+			function	tail
+			product	tail protein
+33439	33867	CDS
+			locus_tag	272_var_CDS_0049
+			function	tail
+			product	tail fiber protein
+33867	34529	CDS
+			locus_tag	272_var_CDS_0050
+			function	lysis
+			product	endolysin
+34805	34554	CDS
+			locus_tag	272_var_CDS_0051
+			function	unknown function
+			product	hypothetical protein
+35047	34889	CDS
+			locus_tag	272_var_CDS_0052
+			function	unknown function
+			product	hypothetical protein
+35996	35085	CDS
+			locus_tag	272_var_CDS_0053
+			function	DNA
+			function	 RNA and nucleotide metabolism
+			product	ATP-dependent DNA ligase
+36605	36051	CDS
+			locus_tag	272_var_CDS_0054
+			function	other
+			product	MazG-like pyrophosphatase
+37207	36602	CDS
+			locus_tag	272_var_CDS_0055
+			function	unknown function
+			product	hypothetical protein
+38160	37261	CDS
+			locus_tag	272_var_CDS_0056
+			function	unknown function
+			product	hypothetical protein
+38869	38249	CDS
+			locus_tag	272_var_CDS_0057
+			function	unknown function
+			product	hypothetical protein
+40523	38964	CDS
+			locus_tag	272_var_CDS_0058
+			function	DNA
+			function	 RNA and nucleotide metabolism
+			product	DNA helicase
+40930	40520	CDS
+			locus_tag	272_var_CDS_0059
+			function	DNA
+			function	 RNA and nucleotide metabolism
+			product	DNA helicase
+44030	40923	CDS
+			locus_tag	272_var_CDS_0060
+			function	DNA
+			function	 RNA and nucleotide metabolism
+			product	DNA polymerase
+44584	44030	CDS
+			locus_tag	272_var_CDS_0061
+			function	DNA
+			function	 RNA and nucleotide metabolism
+			product	DNA polymerase exonuclease subunit
+45676	44660	CDS
+			locus_tag	272_var_CDS_0062
+			function	other
+			product	polynucleotide kinase/phosphorylase
+45792	45679	CDS
+			locus_tag	272_var_CDS_0063
+			function	unknown function
+			product	hypothetical protein
+45797	47263	CDS
+			locus_tag	272_var_CDS_0064
+			function	unknown function
+			product	hypothetical protein
+47478	47260	CDS
+			locus_tag	272_var_CDS_0065
+			function	tail
+			product	tail assembly chaperone
+47680	47462	CDS
+			locus_tag	272_var_CDS_0066
+			function	unknown function
+			product	hypothetical protein
+47910	47680	CDS
+			locus_tag	272_var_CDS_0067
+			function	unknown function
+			product	hypothetical protein
+48999	47998	CDS
+			locus_tag	272_var_CDS_0068
+			function	unknown function
+			product	hypothetical protein
+49997	49104	CDS
+			locus_tag	272_var_CDS_0069
+			function	unknown function
+			product	hypothetical protein
+51343	50156	CDS
+			locus_tag	272_var_CDS_0070
+			function	DNA
+			function	 RNA and nucleotide metabolism
+			product	Dda-like helicase
+51752	51330	CDS
+			locus_tag	272_var_CDS_0071
+			function	unknown function
+			product	hypothetical protein
+51729	51818	CDS
+			locus_tag	272_var_CDS_0072
+			function	unknown function
+			product	hypothetical protein
+51921	52706	CDS
+			locus_tag	272_var_CDS_0073
+			function	unknown function
+			product	hypothetical protein
+52716	54134	CDS
+			locus_tag	272_var_CDS_0074
+			function	unknown function
+			product	hypothetical protein
+54158	54607	CDS
+			locus_tag	272_var_CDS_0075
+			function	unknown function
+			product	hypothetical protein
+54499	55680	CDS
+			locus_tag	272_var_CDS_0076
+			function	DNA
+			function	 RNA and nucleotide metabolism
+			product	DNA primase
+55686	55871	CDS
+			locus_tag	272_var_CDS_0077
+			function	unknown function
+			product	hypothetical protein
+56019	57758	CDS
+			locus_tag	272_var_CDS_0078
+			function	DNA
+			function	 RNA and nucleotide metabolism
+			product	DNA primase
+57763	57894	CDS
+			locus_tag	272_var_CDS_0079
+			function	unknown function
+			product	hypothetical protein
+57956	58072	CDS
+			locus_tag	272_var_CDS_0080
+			function	unknown function
+			product	hypothetical protein
+58257	58114	CDS
+			locus_tag	272_var_CDS_0081
+			function	unknown function
+			product	hypothetical protein
+58437	58264	CDS
+			locus_tag	272_var_CDS_0082
+			function	unknown function
+			product	hypothetical protein
+58550	58443	CDS
+			locus_tag	272_var_CDS_0083
+			function	unknown function
+			product	hypothetical protein
+58735	58577	CDS
+			locus_tag	272_var_CDS_0084
+			function	unknown function
+			product	hypothetical protein
+58728	59297	CDS
+			locus_tag	272_var_CDS_0085
+			function	unknown function
+			product	hypothetical protein
+59419	59294	CDS
+			locus_tag	272_var_CDS_0086
+			function	unknown function
+			product	hypothetical protein
+60084	59467	CDS
+			locus_tag	272_var_CDS_0087
+			function	unknown function
+			product	hypothetical protein
+60233	60081	CDS
+			locus_tag	272_var_CDS_0088
+			function	unknown function
+			product	hypothetical protein
+60969	60274	CDS
+			locus_tag	272_var_CDS_0089
+			function	unknown function
+			product	hypothetical protein
+61291	60980	CDS
+			locus_tag	272_var_CDS_0090
+			function	unknown function
+			product	hypothetical protein
+61569	61345	CDS
+			locus_tag	272_var_CDS_0091
+			function	unknown function
+			product	hypothetical protein
+61844	61620	CDS
+			locus_tag	272_var_CDS_0092
+			function	unknown function
+			product	hypothetical protein
+62235	61906	CDS
+			locus_tag	272_var_CDS_0093
+			function	unknown function
+			product	hypothetical protein
+63078	62236	CDS
+			locus_tag	272_var_CDS_0094
+			function	unknown function
+			product	hypothetical protein
+63333	63118	CDS
+			locus_tag	272_var_CDS_0095
+			function	unknown function
+			product	hypothetical protein
+63537	63337	CDS
+			locus_tag	272_var_CDS_0096
+			function	unknown function
+			product	hypothetical protein
+63964	63527	CDS
+			locus_tag	272_var_CDS_0097
+			function	unknown function
+			product	hypothetical protein
+64840	64055	CDS
+			locus_tag	272_var_CDS_0098
+			function	tail
+			product	tail length tape measure protein
+65159	64857	CDS
+			locus_tag	272_var_CDS_0099
+			function	unknown function
+			product	hypothetical protein
+65466	65212	CDS
+			locus_tag	272_var_CDS_0100
+			function	unknown function
+			product	hypothetical protein
+65644	65486	CDS
+			locus_tag	272_var_CDS_0101
+			function	unknown function
+			product	hypothetical protein

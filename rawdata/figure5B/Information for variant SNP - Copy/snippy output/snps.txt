@@ -1,0 +1,7 @@
+DateTime	2026-04-21T08:14:44
+ReadFiles	/media/ben/eb2bfd7c-b1ec-4a81-b90b-3fe588646dea/CPL/scratch/Christian/snippy_tor_torv1.1/X0058/11_fastp_trimmed/11566_CPL00272_variant_S17_R1_001_fastp.fastq.gz /media/ben/eb2bfd7c-b1ec-4a81-b90b-3fe588646dea/CPL/scratch/Christian/snippy_tor_torv1.1/X0058/11_fastp_trimmed/11566_CPL00272_variant_S17_R2_001_fastp.fastq.gz
+Reference	/media/ben/eb2bfd7c-b1ec-4a81-b90b-3fe588646dea/CPL/scratch/Christian/snippy_tor_torv1.1/X0058/11_fastp_trimmed/272_CPL_genome_terminase_reoriented.fasta
+ReferenceSize	65815
+Software	snippy 4.6.0
+Variant-SNP	1
+VariantTotal	1

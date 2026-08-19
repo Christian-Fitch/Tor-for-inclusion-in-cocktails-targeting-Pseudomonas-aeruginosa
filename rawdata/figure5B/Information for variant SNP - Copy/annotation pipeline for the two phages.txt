@@ -1,0 +1,171 @@
+annotation pipeline for the two phages - CPL00272 and CPL00272 variant isolated on DFI10.1
+
+source ~/.bashrc
+
+#for the first one CPL00272, using the PAO1 genome as a reference 
+conda activate bbmap
+
+bbmap.sh \
+ref=PAO1.fasta \
+nodisk=t \
+minid=0.95 maxindel=3 bwr=0.16 bw=12 quickmatch fast minhits=2 \
+qtrim=rl trimq=10 untrim \
+in1=11566_CPL00272_CPL_S16_R1_001_fastp.fastq.gz \
+in2=11566_CPL00272_CPL_S16_R2_001_fastp.fastq.gz \
+ordered=t \
+outu=unmapped.fq.gz 2>&1 | tee -a 272_CPL.log
+
+#6% mapped
+
+clumpify.sh -da in=unmapped.fq.gz out=unmapped.clumped.fq.gz dedupe optical 2>&1 | tee -a 272_CPL.log
+filterbytile.sh -da in=unmapped.clumped.fq.gz out=unmapped.filtered_by_tile.fq.gz 2>&1 | tee -a 272_CPL.log
+bbduk.sh in=unmapped.filtered_by_tile.fq.gz out=unmapped.trimmed.fq.gz ktrim=r k=23 mink=11 hdist=1 tbo tpe minlen=50 ref=adapters ftm=5 ordered 2>&1 | tee -a 272_CPL.log
+bbduk.sh in=unmapped.trimmed.fq.gz out=unmapped.filtered.fq.gz k=31 ref=artifacts,phix ordered cardinality 2>&1 | tee -a 272_CPL.log
+tadpole.sh in=unmapped.filtered.fq.gz out=unmapped.ec.fq.gz mode=correct k=62 ecc ecco merge=t 2>&1 | tee -a 272_CPL.log
+reformat.sh in=unmapped.ec.fq.gz out1=272_CPL.fwd.ec.fq.gz out2=272_CPL.rev.ec.fq.gz
+
+rm unmapped.fq.gz
+rm unmapped.clumped.fq.gz
+rm unmapped.filtered_by_tile.fq.gz
+rm unmapped.trimmed.fq.gz
+rm unmapped.filtered.fq.gz
+rm unmapped.ec.fq.gz
+
+#assmebly de novo using shovill
+
+conda activate shovill
+
+shovill --outdir shovill \
+--R1 272_CPL.fwd.ec.fq.gz \
+--R2 272_CPL.rev.ec.fq.gz \
+--mincov 20 \
+--cpus 64 \
+--ram 120 \
+--minlen 10000 \
+--force  2>&1 | tee -a 272_CPL.log
+
+# a beautiful single contig ;)
+
+conda activate checkv
+checkv end_to_end shovill/contigs.fa checkv -t 64 -d /home/artic/bens_toys/dbs/checkv-db-v1.1/ 2>&1 | tee -a 272_CPL.log
+cat checkv/quality_summary.tsv
+
+conda activate pharokka
+pharokka.py -i checkv/viruses.fna -o 272_CPL-pharokka -d /mnt/773be256-7089-43eb-a736-be2e5373be02/CPL/dbs/pharokka-1.2.0 -t 64 -p 272_CPL -l 272_CPL
+#terminase large subunit found at 38056 on the positive strand 
+
+pharokka.py -i checkv/viruses.fna -o 272_CPLreordered-pharokka -d /mnt/773be256-7089-43eb-a736-be2e5373be02/CPL/dbs/pharokka-1.2.0 -t 64 -p 272_CPL -l 272_CPL --terminase --terminase_strand pos --terminase_start 38056 -f
+
+pharokka_plotter.py -p 272_CPL -i checkv/viruses.fna -n 272_CPL_plot -o 272_CPL-pharokka --truncate 20 --interval 10000 --plot_title 'Pseudomonas phage 272_CPL' --dpi 300
+
+# all good. Moving to the non-CPL one. 
+
+conda activate bbmap
+
+bbmap.sh \
+ref=DFI10.1.fasta \
+nodisk=t \
+minid=0.95 maxindel=3 bwr=0.16 bw=12 quickmatch fast minhits=2 \
+qtrim=rl trimq=10 untrim \
+in1=11566_CPL00272_variant_S17_R1_001_fastp.fastq.gz \
+in2=11566_CPL00272_variant_S17_R2_001_fastp.fastq.gz \
+ordered=t \
+outu=unmapped.fq.gz 2>&1 | tee -a 272_var.log
+
+#65% mapped, less good, but also a weirder phage
+
+clumpify.sh -da in=unmapped.fq.gz out=unmapped.clumped.fq.gz dedupe optical 2>&1 | tee -a 272_var.log
+filterbytile.sh -da in=unmapped.clumped.fq.gz out=unmapped.filtered_by_tile.fq.gz 2>&1 | tee -a 272_var.log
+bbduk.sh in=unmapped.filtered_by_tile.fq.gz out=unmapped.trimmed.fq.gz ktrim=r k=23 mink=11 hdist=1 tbo tpe minlen=50 ref=adapters ftm=5 ordered 2>&1 | tee -a 272_var.log
+bbduk.sh in=unmapped.trimmed.fq.gz out=unmapped.filtered.fq.gz k=31 ref=artifacts,phix ordered cardinality 2>&1 | tee -a 272_var.log
+tadpole.sh in=unmapped.filtered.fq.gz out=unmapped.ec.fq.gz mode=correct k=62 ecc ecco merge=t 2>&1 | tee -a 272_var.log
+reformat.sh in=unmapped.ec.fq.gz out1=272_var.fwd.ec.fq.gz out2=272_var.rev.ec.fq.gz
+
+rm unmapped.fq.gz
+rm unmapped.clumped.fq.gz
+rm unmapped.filtered_by_tile.fq.gz
+rm unmapped.trimmed.fq.gz
+rm unmapped.filtered.fq.gz
+rm unmapped.ec.fq.gz
+
+#assmebly de novo using shovill
+
+conda activate shovill
+
+shovill --outdir shovill \
+--R1 272_var.fwd.ec.fq.gz \
+--R2 272_var.rev.ec.fq.gz \
+--mincov 20 \
+--cpus 64 \
+--ram 120 \
+--minlen 10000 \
+--force  2>&1 | tee -a 272_var.log
+
+# a beautiful single contig ;)
+
+conda activate checkv
+checkv end_to_end shovill/contigs.fa checkv -t 64 -d /home/artic/bens_toys/dbs/checkv-db-v1.1/ 2>&1 | tee -a 272_var.log
+cat checkv/quality_summary.tsv
+
+#complete! Definitely different...
+
+conda activate pharokka
+pharokka.py -i checkv/viruses.fna -o 272_var-pharokka -d /mnt/773be256-7089-43eb-a736-be2e5373be02/CPL/dbs/pharokka-1.2.0 -t 64 -p 272_var -l 272_var
+#terminase large subunit found at 38132 on the positive strand 
+
+pharokka.py -i checkv/viruses.fna -o 272_var-reordered-pharokka -d /mnt/773be256-7089-43eb-a736-be2e5373be02/CPL/dbs/pharokka-1.2.0 -t 64 -p 272_var -l 272_var --terminase --terminase_strand pos --terminase_start 38132 -f
+
+pharokka_plotter.py -p 272_var -i checkv/viruses.fna -n 272_var_plot -o 272_var-pharokka --truncate 20 --interval 10000 --plot_title 'Pseudomonas phage 272_var' --dpi 300
+
+
+# now to do some alignments? Reccomended by Luis to do this in Mummer4...
+# https://github.com/mummer4/mummer?tab=readme-ov-file
+
+# there are seemingly two tools, nucmer and promer. Nucmer is an all vs all comparison of nucleotide sequences that is best used for highly similar sequences that may have large rearrangements. Promer is the same, but on the protein level, where it will do the translation for me. I am going to want to use nucmer. I can also run something called show-snps which will report snps and indels the the delta output file of nucmer
+
+conda activate mummer4
+
+nucmer -p mummer_alignment 272_CPLreordered-pharokka/272_CPL_genome_terminase_reoriented.fasta 272_var-reordered-pharokka/272_var_genome_terminase_reoriented.fasta
+
+#to run more analysis on it, want to run dnadiff to run a suite of tools to find potential snps or differences
+
+dnadiff -p CPL_vs_var_differences 272_CPLreordered-pharokka/272_CPL_genome_terminase_reoriented.fasta 272_var-reordered-pharokka/272_var_genome_terminase_reoriented.fasta
+
+cat CPL_vs_var_differences.report
+
+#the report file indicates the two are 99.93% identical in terms of identity, with 39 total SNPs, but only one with 20 identical base pairs either side
+#to be looked at. There are also 9 indels between the two, but none with 20 identical bases either side. Seems to be needed to explore the SNPs and indels.
+
+cat CPL_vs_var_differences.snps
+
+
+#found a guide to plotting this in R! 
+
+delta-filter -1 -q mummer_alignment.delta > mmummer_alignment_filter.delta
+show-coords -c -l -L 1000 -r -T mmummer_alignment_filter.delta > mmummer_alignment_filter_coords.txt
+
+conda activate mapping
+samtools faidx 272_CPLreordered-pharokka/272_CPL_genome_terminase_reoriented.fasta
+
+#didnt work very well unfortunately, mainly for nonsimilar sequences.
+
+#maybe try the inbuilt plotter - mummerplot
+
+conda activate mummer4
+mummerplot CPL_vs_var_differences.delta -R 272_CPLreordered-pharokka/272_CPL_genome_terminase_reoriented.fasta -Q 272_var-reordered-pharokka/272_var_genome_terminase_reoriented.fasta
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

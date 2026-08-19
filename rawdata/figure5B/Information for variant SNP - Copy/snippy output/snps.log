@@ -1,0 +1,100 @@
+### echo snippy 4.6.0
+### cd /media/ben/eb2bfd7c-b1ec-4a81-b90b-3fe588646dea/CPL/scratch/Christian/snippy_tor_torv1.1/X0058/11_fastp_trimmed
+
+### /home/ben/mambaforge/envs/snippy/bin/snippy --outdir mysnps --ref 272_CPL_genome_terminase_reoriented.fasta --R1 11566_CPL00272_variant_S17_R1_001_fastp.fastq.gz --R2 11566_CPL00272_variant_S17_R2_001_fastp.fastq.gz
+
+### samtools faidx reference/ref.fa
+
+
+### bwa index reference/ref.fa
+
+[bwa_index] Pack FASTA... 0.00 sec
+[bwa_index] Construct BWT for the packed sequence...
+[bwa_index] 0.02 seconds elapse.
+[bwa_index] Update BWT... 0.00 sec
+[bwa_index] Pack forward-only FASTA... 0.00 sec
+[bwa_index] Construct SA from BWT and Occ... 0.02 sec
+[main] Version: 0.7.18-r1243-dirty
+[main] CMD: bwa index reference/ref.fa
+[main] Real time: 0.307 sec; CPU: 0.039 sec
+
+### mkdir -p reference/genomes && cp -f reference/ref.fa reference/genomes/ref.fa
+
+
+### ln -sf reference/ref.fa .
+
+
+### ln -sf reference/ref.fa.fai .
+
+
+### mkdir -p reference/ref && gzip -c reference/ref.gff > reference/ref/genes.gff.gz
+
+
+### bwa mem  -Y -M -R '@RG\tID:mysnps\tSM:mysnps' -t 8 reference/ref.fa /media/ben/eb2bfd7c-b1ec-4a81-b90b-3fe588646dea/CPL/scratch/Christian/snippy_tor_torv1.1/X0058/11_fastp_trimmed/11566_CPL00272_variant_S17_R1_001_fastp.fastq.gz /media/ben/eb2bfd7c-b1ec-4a81-b90b-3fe588646dea/CPL/scratch/Christian/snippy_tor_torv1.1/X0058/11_fastp_trimmed/11566_CPL00272_variant_S17_R2_001_fastp.fastq.gz | samclip --max 10 --ref reference/ref.fa.fai | samtools sort -n -l 0 -T /tmp --threads 3 -m 2000M | samtools fixmate -m --threads 3 - - | samtools sort -l 0 -T /tmp --threads 3 -m 2000M | samtools markdup -T /tmp --threads 3 -r -s - - > snps.bam
+
+COMMAND: samtools markdup -T /tmp --threads 3 -r -s - -
+READ: 773173
+WRITTEN: 760475
+EXCLUDED: 514237
+EXAMINED: 258936
+PAIRED: 257760
+SINGLE: 1176
+DUPLICATE PAIR: 11696
+DUPLICATE SINGLE: 1002
+DUPLICATE PAIR OPTICAL: 0
+DUPLICATE SINGLE OPTICAL: 0
+DUPLICATE NON PRIMARY: 0
+DUPLICATE NON PRIMARY OPTICAL: 0
+DUPLICATE PRIMARY TOTAL: 12698
+DUPLICATE TOTAL: 12698
+ESTIMATED_LIBRARY_SIZE: 1376855
+
+
+### samtools index snps.bam
+
+
+### fasta_generate_regions.py reference/ref.fa.fai 4461 > reference/ref.txt
+
+
+### freebayes-parallel reference/ref.txt 8 -p 2 -P 0 -C 2 -F 0.05 --min-coverage 10 --min-repeat-entropy 1.0 -q 13 -m 60 --strict-vcf   -f reference/ref.fa snps.bam > snps.raw.vcf
+
+
+### bcftools view --include 'FMT/GT="1/1" && QUAL>=100 && FMT/DP>=10 && (FMT/AO)/(FMT/DP)>=0' snps.raw.vcf  | vt normalize -r reference/ref.fa - | bcftools annotate --remove '^INFO/TYPE,^INFO/DP,^INFO/RO,^INFO/AO,^INFO/AB,^FORMAT/GT,^FORMAT/DP,^FORMAT/RO,^FORMAT/AO,^FORMAT/QR,^FORMAT/QA,^FORMAT/GL' > snps.filt.vcf
+
+
+### cp snps.filt.vcf snps.vcf
+
+
+### /home/ben/mambaforge/envs/snippy/bin/snippy-vcf_to_tab --gff reference/ref.gff --ref reference/ref.fa --vcf snps.vcf > snps.tab
+
+Loading reference: reference/ref.fa
+Loaded 1 sequences.
+Loading features: reference/ref.gff
+Parsing variants: snps.vcf
+Converted 1 SNPs to TAB format.
+
+### /home/ben/mambaforge/envs/snippy/bin/snippy-vcf_extract_subs snps.filt.vcf > snps.subs.vcf
+
+
+### bcftools convert -Oz -o snps.vcf.gz snps.vcf
+
+
+### bcftools index -f snps.vcf.gz
+
+
+### bcftools consensus --sample mysnps -f reference/ref.fa -o snps.consensus.fa snps.vcf.gz
+
+Applied 1 variants
+
+### bcftools convert -Oz -o snps.subs.vcf.gz snps.subs.vcf
+
+
+### bcftools index -f snps.subs.vcf.gz
+
+
+### bcftools consensus --sample mysnps -f reference/ref.fa -o snps.consensus.subs.fa snps.subs.vcf.gz
+
+Applied 1 variants
+
+### rm -f snps.subs.vcf.gz snps.subs.vcf.gz.csi snps.subs.vcf.gz.tbi
+
