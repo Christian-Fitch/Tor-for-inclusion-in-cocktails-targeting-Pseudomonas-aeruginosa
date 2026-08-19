@@ -1,0 +1,48 @@
+#to look for snps - https://github.com/tseemann/snippy
+conda activate snippy on minikonrad
+
+#to look for any deletions - only on konrad though
+assemble using spades and compare full assembly to assembled genome
+
+or minimap2 -ax (unicycler contains this) to map reads to target genome
+with forward and reverse reads (output as a bam file)
+
+#also look for any 272 in the reads, hopefully there wont be much at all!!
+
+#----------------------------------------------------------------------------------------
+
+#moving my files over to minikonrad for the analysis
+rsync -avh *.gz ben@144.173.27.31:/home/ben/scratch/christian_psa/272_snippy
+
+#now on minikonrad will use snippy
+#will use as inputs - 272_CPL.gbk (from the long read sequencing experiment), 
+#both the forward and reverse qc'd reads, and a new directory that will be made.
+
+#Will use the resistant looking for reads
+rsync -avh 11566_CPL00272_variant*.gz ben@144.173.27.31:/home/ben/scratch/christian_psa/272_snippy
+
+#----------------------------------------------------------------------------------------
+
+#Calculate number of reads
+zcat 11566_CPL00272_variant_S17_R1_001_fastp.fastq.gz | echo $((`wc -l` / 4))
+
+#388383 reads, all length 150bp, so (388383*150)/65000 = 896-fold coverage. 
+#According to wiki, best results at 50-100x so subsampling needed. 
+
+zcat 11566_CPL00272_variant_S17_R2_001_fastp.fastq.gz | echo $((`wc -l` / 4))
+#same number, not surprising
+
+#want 100-fold coverage, the length of the genome is 65000b, each read is 150bp, so 1-fold coverage
+#is 433 reads, so 100-fold coverage is 43333 reads. Can subsample both using seqtk, should be a
+#dependency of snippy.
+
+seqtk sample -s100 11566_CPL00272_variant_S17_R1_001_fastp.fastq.gz 43333 > 272_variant_100x_coverage_R1.fq.gz
+seqtk sample -s100 11566_CPL00272_variant_S17_R2_001_fastp.fastq.gz 43333 > 272_variant_100x_coverage_R2.fq.gz
+
+
+#run snippy
+snippy --cpus 16 --outdir variant_snippy_analysis --ref 272_CPL.gbk --R1 272_variant_100x_coverage_R1.fq.gz --R2 272_variant_100x_coverage_R2.fq.gz
+
+#woohoo it worked.
+
+
