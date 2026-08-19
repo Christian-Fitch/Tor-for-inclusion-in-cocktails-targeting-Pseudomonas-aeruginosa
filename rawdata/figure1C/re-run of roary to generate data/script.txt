@@ -1,0 +1,38 @@
+#reannotate the bacterial genomes in GenBank and make them gff3 files. Note these files are in media/ben/e.../CPL/scratch/roary_cf_pseudomonas
+
+#run the reannotations
+for fasta in *.fasta; do
+    sample="${fasta%.fasta}"
+    prokka "$fasta" --outdir "prokka_out/${sample}" --prefix "$sample" 2>> prokka_errors.log
+done
+
+#for IPAP - lots of the strains are not .fasta file extensions - they are .fsa_nt.gz
+
+gunzip *.fsa_nt.gz #unzips the files
+
+#this loop changes all the file extensions to .fasta
+for f in *.fsa_nt; do
+    mv "$f" "${f%.fsa_nt}.fasta"
+done
+
+#now can just run again
+for fasta in *.fasta; do
+    sample="${fasta%.fasta}"
+    prokka "$fasta" --outdir "prokka_out/${sample}" --prefix "$sample" 2>> prokka_errors_IPAP.log
+done
+
+#copy gff files into gff3_files repo
+
+cp prokka_out/*/*.gff gff3_files
+
+#create env files for prokka for this
+
+conda env export > prokka_for_annotation.yml
+
+#now to activate roary and run that script
+
+mamba activate roary
+roary -p 8 -o clustered_proteins -f roary_output -e -n -v -r gff3_files/*.gff 2>&1 | tee roary.log
+
+#once run, export the output environment
+mamba env export > roary_for_alignment.yml
