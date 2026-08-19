@@ -1,0 +1,4 @@
+cd scratch/christian_psa/hosts
+mamba activate roary
+roary -p 8 -o clustered_proteins -f roary_output -e -n -v -r *.gff 2>&1 | tee roary.log
+FastTree -nt -gtr < roary_output/core_gene_alignment.aln > core-genes.tree
