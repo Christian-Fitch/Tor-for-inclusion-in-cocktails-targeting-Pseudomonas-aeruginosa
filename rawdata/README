@@ -2,3 +2,5 @@ This directory contains all the rawdata required to recreate the figures. The qu
 
 Note that the following rawdata directories contain compressed files that need to be extracted into their current directories (don't make any new subdirectories):
   figure1B
+  figure1C
+  
