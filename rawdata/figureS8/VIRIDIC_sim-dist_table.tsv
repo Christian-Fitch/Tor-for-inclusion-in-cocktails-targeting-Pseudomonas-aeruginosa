@@ -1,0 +1,6 @@
+"genome"	"Pseudomonas_phage_PT07"	"Pseudomonas_phage_PNM"	"Pseudomonas_phage_14-1"	"Pseudomonas_phage_CPL00272"	"Pseudomonas_phage_CPL00950"
+"Pseudomonas_phage_PT07"	100	0.075	0	0.115	0
+"Pseudomonas_phage_PNM"	0.075	100	0.137	0.132	0.136
+"Pseudomonas_phage_14-1"	0	0.137	100	93.525	93.944
+"Pseudomonas_phage_CPL00272"	0.115	0.132	93.525	100	94.09
+"Pseudomonas_phage_CPL00950"	0	0.136	93.944	94.09	100
