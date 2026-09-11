@@ -1,4 +1,4 @@
-This is the data and manuscript accompanying Phage Tor is a potent, broad-host range candidate for inclusion in cocktails targeting Pseudomonas aeruginosa.
+This is the data and manuscript accompanying Phage Tor is a potent, broad-host range candidate for inclusion in cocktails targeting Pseudomonas aeruginosa. Please note, so that the manuscript is not published in advance of a BiorXiv submission, the quarto document itself will be uploaded when possible - until this time, this repository will only include raw data and the figures.
 
 Document creation, data visualisation, and associated data analysis was generated in Quarto using RStudio. All data is located within the /rawdata directory, and organised into folders dependent on where they lie in the manuscript. Should quarto be running correctly, the entire manuscript should be re-creatable. 
 
